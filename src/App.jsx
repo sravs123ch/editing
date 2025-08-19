@@ -118,7 +118,7 @@
 // }
 
 // export default Editor;
-
+import React, { useRef } from 'react';
 import {
   Box,
   CssBaseline,

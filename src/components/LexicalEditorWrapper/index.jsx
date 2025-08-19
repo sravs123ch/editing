@@ -268,7 +268,7 @@ applyStyle({ "background-color": e.target.value });
         <LinkPlugin />
         <ImagesPlugin captionsEnabled={false} />
         <FloatingTextFormatToolbarPlugin />
-        <TablePlugin/>
+        {/* <TablePlugin/> */}
       </Box>
     </LexicalComposer>
   );

@@ -159,3 +159,26 @@
   display: inline-block;
   background-color: #eee;
 }
+
+.table {
+  margin-top: 4px;
+  border-collapse: collapse;
+}
+
+.table-cell {
+  min-width:70px;
+  border: 1px solid #bbb;
+  padding-left: 6px;
+}
+
+.table-cell p {
+  margin-bottom: 4px;
+}
+
+.table-row {
+ border: 1px solid #000;
+}
+
+.table-cell-header {
+  background: #f2f3f5;
+}

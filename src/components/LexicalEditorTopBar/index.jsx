@@ -301,12 +301,12 @@ const LexicalEditorTopBar = ({ onDownloadDocx }) => {
       <Box sx={{ display: "flex", gap: 1, p: 1, background: "#fff" }}>
       <ColorPlugin/>
       <TablePlugin/>
-        <Button
+        {/* <Button
           variant="contained"
           onClick={() => onDownloadDocx(editor.getEditorState())}
         >
           Download DOCX
-        </Button>
+        </Button> */}
       </Box>
     </Grid>
   );

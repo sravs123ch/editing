@@ -3,6 +3,9 @@ const lexicalEditorTheme = {
   rtl: "rtl",
   placeholder: "editor-placeholder",
   paragraph: "editor-paragraph",
+  table: "table",
+  tableCell: "table-cell",
+  tableCellHeader: "table-cell-header",
   quote: "editor-quote",
   heading: {
     h1: "editor-heading-h1",
