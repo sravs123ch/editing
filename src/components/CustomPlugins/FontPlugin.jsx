@@ -10,7 +10,6 @@ import {
   $getSelectionStyleValueForProperty,
 } from "@lexical/selection";
 import { mergeRegister } from "@lexical/utils";
-import { Select, MenuItem, FormControl, InputLabel, Box } from "@mui/material";
 
 const LOW_PRIORITY = 1;
 
@@ -116,39 +115,41 @@ export default function FontPlugin() {
     });
   };
 
-  return (
-    <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-      <FormControl size="small" sx={{ minWidth: 80 }}>
-        <InputLabel>Size</InputLabel>
-        <Select
-          value={fontSize}
-          label="Size"
-          onChange={handleFontSizeChange}
-          sx={{ fontSize: "14px" }}
-        >
-          {FONT_SIZES.map((size) => (
-            <MenuItem key={size.value} value={size.value}>
-              {size.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+  const selectStyle = {
+    padding: "4px 8px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    fontSize: "14px",
+    backgroundColor: "white",
+    cursor: "pointer",
+    marginRight: "8px"
+  };
 
-      <FormControl size="small" sx={{ minWidth: 140 }}>
-        <InputLabel>Font</InputLabel>
-        <Select
-          value={fontFamily}
-          label="Font"
-          onChange={handleFontFamilyChange}
-          sx={{ fontSize: "14px" }}
-        >
-          {FONT_FAMILIES.map((font) => (
-            <MenuItem key={font.value} value={font.value} sx={{ fontFamily: font.value }}>
-              {font.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </Box>
+  return (
+    <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+      <select
+        value={fontSize}
+        onChange={handleFontSizeChange}
+        style={{ ...selectStyle, minWidth: "80px" }}
+      >
+        {FONT_SIZES.map((size) => (
+          <option key={size.value} value={size.value}>
+            {size.label}
+          </option>
+        ))}
+      </select>
+
+      <select
+        value={fontFamily}
+        onChange={handleFontFamilyChange}
+        style={{ ...selectStyle, minWidth: "140px" }}
+      >
+        {FONT_FAMILIES.map((font) => (
+          <option key={font.value} value={font.value} style={{ fontFamily: font.value }}>
+            {font.label}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
