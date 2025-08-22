@@ -10,6 +10,7 @@ import { TwitterPicker } from "react-color";
 import { eventTypes } from "./toolbarIconsList";
 import ColorPlugin from "../CustomPlugins/ColorPlugin";
 import TablePlugin from "../CustomPlugins/TablePlugin";
+import FontPlugin from "../CustomPlugins/FontPlugin";
 import { $getRoot } from "lexical";
 import { $generateNodesFromDOM } from "@lexical/html";
 import { renderAsync } from "docx-preview";
@@ -304,6 +305,7 @@ const LexicalEditorTopBar = ({ onDownloadDocx, onImportDocx }) => {
       {isLink && createPortal(<FloatingLinkEditor editor={editor} />, document.body)}
       <Grid item sx={{ display: "flex", gap: 1, justifyContent: "flex-end", ml: "auto" }}>
       <Box sx={{ display: "flex", gap: 1, p: 1, background: "#fff" }}>
+        <FontPlugin />
         <ColorPlugin />
         <TablePlugin />
       </Box>
