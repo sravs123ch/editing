@@ -64,7 +64,7 @@ function LazyImage({
       ref={imageRef}
       style={{
         height,
-        maxWidth,
+        // maxWidth,
         width,
       }}
       draggable="false"
